@@ -1,0 +1,71 @@
+<html>
+<head>
+<script>
+function confirm(){
+var name = document.getElementById("name").value;
+var tel = document.getElementById("pno").value;
+var date = document.getElementById("date").value;
+
+if(name=="")
+{
+alert("Please enter your name!")
+}
+else if(tel.length != 10 || Number.isInteger(tel) == "false")
+{
+alert("Please enter a valid phone number")
+}
+else if(date==""){
+alert("Please select a date")
+}
+else{alert("Successfully Confirmed your booking")}
+}
+
+
+function checkout(){
+var num = parseInt(document.getElementById('adults').value);
+var total = num*1500;
+document.getElementById('total').value = total;
+}
+</script>
+</head>
+<h1 align="center">Introducing Helicopter Rides</h1>
+<p align="center" font-face="sans-serif">Enjoy the hills of Ladakh from a great height</p>
+<marquee>
+<img src="./static/h1.jpg" height="300" width="500">
+<img src="./static/h2.jpg" height="300" width="500">
+<img src="./static/h1.png" height="300" width="500">
+<img src="./static/h3.jpg" height="300" width="500">
+<img src="./static/h5.jpg" height="300" width="500">
+</marquee>
+<body align="center" bgcolor="FD7014">
+
+<form>
+<table align="center" border="1">
+<tr>
+<td>Name:</td>
+<td><input type="text" id="name" name="name"></td>
+</tr>
+<br>
+<tr>
+<td>Contact No.</td>
+<td><input type="tel" id="pno" name="pno" ></td>
+</tr>
+<br>
+<tr>
+<td>Number of Adults:</td>
+<td><input type="text" id="adults" name="adults" onchange="checkout()"></td>
+</tr>
+<br>
+<tr>
+<td>Date of Trip:</td>
+<td><input type="date" id="date" name="date"></td>
+</tr>
+<td>Total: </td>
+<td><input type="text" id="total" name="total"></td>
+<br>
+</table>
+<input type="submit" onclick="confirm()" value="Confirm Booking">
+<input type="reset">
+</form>
+</body>
+</html>

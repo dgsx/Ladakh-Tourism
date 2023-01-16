@@ -1,0 +1,27 @@
+<html>
+<center>
+    <head><title>Login</title></head>
+    <body>
+    <h1>Login</h1>
+    <form name="login" action="/login" method="post">
+    <p>Username: <input type="text" name="username" /></p>
+    <p>Password: <input type="password" name="password" /></p>
+    <p>Confirm Password: <input type="password" name="cpassword" /></p>
+    <p><input type="submit" value="Login" onclick="login()" /></p>
+    </form>
+    </body>
+    <script language="javascript">
+        function login(){
+            var username = login.username.value;
+            var password=login.password.value;
+            var cpassword = login.cpassword.value;
+            if(cpassword==password){
+                alert("Logged in Successfully!")
+            }
+            else{
+                alert("Please check your passwords !")
+            }
+        }
+    </script>
+    </center>
+</html>

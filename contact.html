@@ -1,0 +1,44 @@
+<html>
+<body bgcolor="#FF1E1E">
+<h1> Contact Us</h1>
+
+<form>
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" id="name" name="name"></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><input type="text" id="email" name="email"></td>
+</tr>
+<tr>
+<td>Message:</td>
+<td><input type="text" id="msg" name="msg"></td>
+</tr>
+</table>
+<br>
+<input type="submit" onClick="con()">
+<input type="reset">
+</form>
+<head>
+<script>
+function con(){
+var name = document.getElementById('name').value;
+var email = document.getElementById('email').value;
+var msg = document.getElementById('msg').value;
+if (name==""){
+alert("Please enter your name")
+}
+else if(!email.includes('@')){
+alert('Please enter a valid Email Address')
+}
+else if(msg==""){
+alert('Please enter your message')}
+else{
+alert("Thank you "+name+"!"+"\nFor Contacting us\nWe will get back to you ASAP! ")}
+}
+</script>
+</head>
+</body>
+</html>
